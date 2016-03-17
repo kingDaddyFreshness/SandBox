@@ -1,3 +1,6 @@
 my-web-app/.project
 my-web-app/.classpath
 my-web-app/.settings/org.eclipse.core.resources.prefs
+my-web-app/.settings/org.eclipse.m2e.core.prefs
+my-web-app/.settings/org.eclipse.jdt.core.prefs
+my-web-app/.gitignore
