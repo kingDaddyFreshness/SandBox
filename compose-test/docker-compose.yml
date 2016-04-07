@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webA:
+    image: my1
+    ports: 
+        - "9007:8080"
+  webB:
+    image: my4
+    ports: 
+        - "9008:8080"
+  webC:
+    image: my5
+    ports: 
+        - "9009:8080"

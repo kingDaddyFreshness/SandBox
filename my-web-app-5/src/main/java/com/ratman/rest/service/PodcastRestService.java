@@ -16,6 +16,6 @@ public class PodcastRestService {
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getPodcasts() {
-		return "hello john from my-web-app-4!";
+		return "hello john from my-web-app-5!";
 	}
 }

@@ -8,11 +8,9 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.stereotype.Component;
 
 @Component
-@Path("/podcasts")
-public class PodcastRestService {
+@Path("/myresource")
+public class MyResource {
 	
-	
-
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getPodcasts() {
