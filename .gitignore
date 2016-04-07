@@ -4,3 +4,15 @@ my-web-app/.settings/org.eclipse.core.resources.prefs
 my-web-app/.settings/org.eclipse.m2e.core.prefs
 my-web-app/.settings/org.eclipse.jdt.core.prefs
 my-web-app/.gitignore
+my-web-app-3/.settings/org.eclipse.core.resources.prefs
+my-web-app-3/target/
+my-web-app-3/.settings/org.eclipse.jdt.core.prefs
+my-web-app-3/.settings/org.eclipse.m2e.core.prefs
+my-web-app-4/target/
+my-web-app-4/.settings/org.eclipse.jdt.core.prefs
+my-web-app-4/.settings/org.eclipse.m2e.core.prefs
+my-web-app-3/.classpath
+my-web-app-3/.project
+my-web-app-4/.classpath
+my-web-app-4/.project
+
