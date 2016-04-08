@@ -26,7 +26,7 @@ public class PodcastRestService {
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		WebTarget webTarget = client.target("http://my1:webA/my-web-app/webapi/myresource");
+		WebTarget webTarget = client.target("http://0.0.0.0:9007/my-web-app/webapi/myresource");
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
 		Response response = invocationBuilder.get();
 		
