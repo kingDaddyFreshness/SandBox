@@ -3,6 +3,8 @@ version: '2'
 services:
   webA:
     image: my1
+    links:
+        - webB
     ports: 
         - "9007:8080"
     volumes:
@@ -21,9 +23,9 @@ services:
         - /Users/jhilgedick/src/Sandbox/compose-test/logs2:/usr/local/tomcat/logs
         
     
-  webC:
-    image: my5
-    ports: 
-        - "9009:8080"
-    volumes:
-        - /Users/jhilgedick/src/Sandbox/compose-test/logs3:/usr/local/tomcat/logs
+#  webC:
+#    image: my5
+#    ports: 
+#        - "9009:8080"
+#    volumes:
+#        - /Users/jhilgedick/src/Sandbox/compose-test/logs3:/usr/local/tomcat/logs

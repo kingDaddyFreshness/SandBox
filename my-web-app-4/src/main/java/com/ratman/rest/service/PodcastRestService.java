@@ -23,10 +23,15 @@ public class PodcastRestService {
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getPodcasts() {
 		
+		String hostname = System.getenv("HOSTNAME");
+		
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		WebTarget webTarget = client.target("http://0.0.0.0:9007/my-web-app/webapi/myresource");
+		String url = "http://webA:8080/my-web-app/webapi/myresource";
+		System.out.println("url:" + url);
+		
+		WebTarget webTarget = client.target(url);
 		Invocation.Builder invocationBuilder = webTarget.request(MediaType.TEXT_PLAIN_TYPE);
 		Response response = invocationBuilder.get();
 		
