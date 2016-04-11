@@ -14,14 +14,14 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.springframework.stereotype.Component;
 
 @Component
-@Path("/podcasts")
-public class PodcastRestService {
+@Path("/calling-class")
+public class CallingClass {
 	
 	
 
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
-	public String getPodcasts() {
+	public String callingClass() {
 		
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);

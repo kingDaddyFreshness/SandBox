@@ -19,5 +19,6 @@
 		automatically on annotated classes.
 	-->	
     <bean id="myResourceService" class="com.ratman.rest.service.MyResource" ></bean>
-    <bean id="podcastRestService" class="com.ratman.rest.service.PodcastRestService" ></bean>
+    <bean id="randomIntService" class="com.ratman.rest.service.RandomInt" ></bean>
+    <bean id="callingClassService" class="com.ratman.rest.service.CallingClass" ></bean>
 </beans>

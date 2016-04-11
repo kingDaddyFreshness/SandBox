@@ -9,7 +9,8 @@ public class MyApplication extends ResourceConfig {
     public MyApplication(){
 		register(RequestContextFilter.class);
 		register(MyResource.class);
-		register(PodcastRestService.class);
+		register(RandomInt.class);
+		register(CallingClass.class);
 		register(JacksonFeature.class);		
 	}
 }

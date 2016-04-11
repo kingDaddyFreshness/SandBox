@@ -12,11 +12,8 @@ import javax.ws.rs.core.Response;
 
 import org.glassfish.jersey.client.ClientConfig;
 
-/**
- * Root resource (exposed at "myresource" path)
- */
-@Path("/myresource")
-public class MyResource {
+@Path("/calling-class")
+public class CallingClass {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -30,7 +27,7 @@ public class MyResource {
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		String url = System.getenv("WEBB_URL") + "/my-web-app-4/myresource";
+		String url = System.getenv("WEBB_URL") + "/my-web-app-4/randomInt";
 		System.out.println("url:" + url);
 		
 		WebTarget webTarget = client.target(url);

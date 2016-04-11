@@ -14,8 +14,8 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.springframework.stereotype.Component;
 
 @Component
-@Path("/podcasts")
-public class PodcastRestService {
+@Path("/calling-class")
+public class CallingClass {
 	
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
