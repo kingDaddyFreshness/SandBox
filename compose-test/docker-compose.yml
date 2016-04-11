@@ -1,31 +1,41 @@
 version: '2'
 
 services:
+  
   webA:
     image: my1
+    networks:
+      - my-net
     ports: 
         - "9007:8080"
     volumes:
         - /Users/jhilgedick/src/Sandbox/compose-test/logs1:/usr/local/tomcat/logs
+    environment:
+        WEBB_URL: "http://webB:8080"
+
     
   webB:
     image: my4
-    environment:
-        WEBA: now is the time
-        WEBB: later please
-    links:
-        - webA
+    networks:
+        - my-net
     ports: 
         - "9008:8080"
     volumes:
         - /Users/jhilgedick/src/Sandbox/compose-test/logs2:/usr/local/tomcat/logs
-        
+    environment:
+        WEBA_URL: "http://webA:8080"
     
   webC:
     image: my5
-    links:
-        - webA
+    networks:
+      - my-net
     ports: 
         - "9009:8080"
     volumes:
         - /Users/jhilgedick/src/Sandbox/compose-test/logs3:/usr/local/tomcat/logs
+    environment:
+        WEBA_URL: "http://webA:8080"
+
+networks:
+  my-net:
+    driver: bridge

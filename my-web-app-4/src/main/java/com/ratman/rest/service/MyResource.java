@@ -18,9 +18,6 @@ public class MyResource {
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getStuff() {
 		
-		System.out.println(System.getenv("WEBA"));
-		System.out.println(System.getenv("WEBB"));
-		
 		Map<String,String> vars = System.getenv();
 		Iterator<String> i = vars.keySet().iterator();
 		while (i.hasNext()) {

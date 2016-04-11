@@ -21,12 +21,10 @@ public class PodcastRestService {
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getPodcasts() {
 		
-		String hostname = System.getenv("HOSTNAME");
-		
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		String url = "http://webA:8080/my-web-app/webapi/myresource";
+		String url = System.getenv("WEBA_URL") + "/my-web-app/webapi/randomInt";
 		System.out.println("url:" + url);
 		
 		WebTarget webTarget = client.target(url);
