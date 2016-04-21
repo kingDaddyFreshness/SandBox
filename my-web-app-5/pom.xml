@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ratman</groupId>
-	<artifactId>my-web-app-4</artifactId>
+	<artifactId>my-web-app-5</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>my-web-app-4</name>
+	<name>my-web-app-5</name>
 
 	<properties>
 		<spring.version>3.2.6.RELEASE</spring.version>
@@ -17,7 +17,7 @@
 	</properties>
 
 	<build>
-		<finalName>my-web-app-4</finalName>
+		<finalName>my-web-app-5</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
