@@ -17,16 +17,14 @@ import org.springframework.stereotype.Component;
 @Path("/calling-class")
 public class CallingClass {
 	
-	
-
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
-	public String callingClass() {
+	public String getPodcasts() {
 		
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		String url = System.getenv("WEB5_URL") + "/my-web-app-5/randomInt";
+		String url = System.getenv("WEBA_URL") + "/my-web-app/webapi/randomInt";
 		System.out.println("url:" + url);
 		
 		WebTarget webTarget = client.target(url);

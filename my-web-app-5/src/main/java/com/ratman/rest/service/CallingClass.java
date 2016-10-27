@@ -24,7 +24,7 @@ public class CallingClass {
 		ClientConfig clientConfig = new ClientConfig();
 		Client client = ClientBuilder.newClient(clientConfig);
 		
-		String url = System.getenv("WEBA_URL") + "/my-web-app/webapi/randomInt";
+		String url = System.getenv("WEB4_URL") + "/my-web-app-4/randomInt";
 		System.out.println("url:" + url);
 		
 		WebTarget webTarget = client.target(url);
