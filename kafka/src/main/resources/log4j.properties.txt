@@ -1,0 +1,13 @@
+log4j.rootLogger=DEBUG, FILE, KAFKA
+
+# Define the file appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=log.out
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.conversionPattern=%m%n
+
+log4j.appender.KAFKA=kafka.producer.KafkaLog4jAppender
+log4j.appender.KAFKA.layout=org.apache.log4j.PatternLayout
+log4j.appender.KAFKA.layout.ConversionPattern=%-5p: %c - %m%n
+log4j.appender.KAFKA.BrokerList=localhost:9092
+log4j.appender.KAFKA.Topic=test4
