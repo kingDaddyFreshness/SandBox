@@ -19,9 +19,10 @@ public class GooglePublish {
 		for (int i = 0; i < 20; i++) {
 			for (int j = 0; j < 5; j++) {
 				Message m = Message.of("hi:" + UUID.randomUUID().toString());
-			//pubsub.publishAsync(topicName, m);
-			String id = pubsub.publish(topicName, m);
-			System.out.println("published message to " + topicName + " with id:" + id);
+				//pubsub.publishAsync(topicName, m);
+				String id = pubsub.publish(topicName, m);
+				System.out.println("published message to " + topicName + " with id:" + id);
+			}
 		}
 
 		pubsub.close();
