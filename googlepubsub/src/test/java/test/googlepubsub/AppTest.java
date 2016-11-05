@@ -1,4 +1,4 @@
-package testApp.kafka;
+package test.googlepubsub;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

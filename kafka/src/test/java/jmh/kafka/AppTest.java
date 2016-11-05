@@ -1,4 +1,4 @@
-package testApp.flume;
+package jmh.kafka;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="eventLogger"
+		class="org.apache.flume.clients.log4jappender.Log4jAppender">
+		<param name="Hostname" value="localhost" />
+		<param name="Port" value="44444" />
+		<param name="UnsafeMode" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%t] %d{HH:mm:ss,SSS} %-5p %l - %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="eventLogger" />
+	</root>
+</log4j:configuration>
