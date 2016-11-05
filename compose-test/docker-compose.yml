@@ -1,14 +1,14 @@
 version: '2'
 services:
   webA:
-    image: my1
+    image: kingdaddyfreshness/docker-intro-1:latest 
     ports: 
         - "9007:8080"
   webB:
-    image: my4
+    image: kingdaddyfreshness/docker-intro-2:latest
     ports: 
         - "9008:8080"
   webC:
-    image: my5
+    image: kingdaddyfreshness/docker-intro-3:latest
     ports: 
         - "9009:8080"
