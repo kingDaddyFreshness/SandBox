@@ -10,6 +10,7 @@ public class MyApplication extends ResourceConfig {
 		register(RequestContextFilter.class);
 		register(MyResource.class);
 		register(PodcastRestService.class);
+		register(CallingClass.class);
 		register(JacksonFeature.class);		
 	}
 }
