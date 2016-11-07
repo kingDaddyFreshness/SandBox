@@ -11,6 +11,7 @@ public class MyApplication extends ResourceConfig {
 		register(MyResource.class);
 		register(PodcastRestService.class);
 		register(CallingClass.class);
+		register(RandomInt.class);
 		register(JacksonFeature.class);		
 	}
 }
