@@ -15,3 +15,4 @@ my-web-app-3/.classpath
 my-web-app-3/.project
 my-web-app-4/.classpath
 my-web-app-4/.project
+/target/

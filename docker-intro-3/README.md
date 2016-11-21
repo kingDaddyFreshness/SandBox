@@ -25,4 +25,5 @@ docker run -d --expose=8080 -p 9008:8080 --net=jmh --name=SERVER-2 kingdaddyfres
 docker run -d --expose=8080 -p 9009:8080 --net=jmh --name=SERVER-3 kingdaddyfreshness/docker-intro-3:latest
 http://localhost:9008/docker-intro-2-1.0-SNAPSHOT/calling
 http://localhost:9009/docker-intro-3-1.0-SNAPSHOT/calling
+
 # if you want intro-2 and intro-3 to "talk to each other" on different nodes, then do the following
