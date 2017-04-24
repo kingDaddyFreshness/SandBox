@@ -1,43 +1,43 @@
 package jmh.gcloud;
 
-import java.io.PrintWriter;
+import java.util.List;
 
-import com.google.cloud.datastore.Datastore;
-import com.google.cloud.datastore.DatastoreOptions;
-import com.google.cloud.datastore.DateTime;
-import com.google.cloud.datastore.Entity;
-import com.google.cloud.datastore.FullEntity;
-import com.google.cloud.datastore.IncompleteKey;
-import com.google.cloud.datastore.KeyFactory;
-import com.google.cloud.datastore.Query;
-import com.google.cloud.datastore.QueryResults;
-import com.google.cloud.datastore.StructuredQuery;
+import jmh.gcloud.dao.FunDAO;
+import jmh.gcloud.dao.FunDAOImpl;
+import jmh.gcloud.data.FunProfile;
 
-public class GCloudDataStoreWriter 
-{
+public class GCloudDataStoreWriter {
+
+	private FunDAO funDAO = null;
 	
-    public static void main( String[] args )
-    {
-    	
-        Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-        KeyFactory keyFactory = datastore.newKeyFactory().setKind("visit");
-        IncompleteKey key = keyFactory.setKind("visit").newKey();
+	public GCloudDataStoreWriter() {
+		this.funDAO = new FunDAOImpl();
+	}
+	public FunProfile getFunProfileBySwid(String swid) {
+		return funDAO.getFunProfileBySwid(swid);
+	}
+	
+	public List<String> getSomeSwids() {
+		return funDAO.getSomeSwids();
+	}
+	
+	public static void main(String[] args) {
 
-        // Record a visit to the datastore, storing the IP and timestamp.
-        FullEntity<IncompleteKey> curVisit = FullEntity.newBuilder(key)
-            .set("user_ip", "10.45").set("timestamp", DateTime.now()).build();
-        datastore.add(curVisit);
-
-        // Retrieve the last 10 visits from the datastore, ordered by timestamp.
-        Query<Entity> query = Query.newEntityQueryBuilder().setKind("visit")
-            .setOrderBy(StructuredQuery.OrderBy.desc("timestamp")).setLimit(10).build();
-        QueryResults<Entity> results = datastore.run(query);
-
-        System.out.print("Last 10 visits:\n");
-        while (results.hasNext()) {
-          Entity entity = results.next();
-          System.out.format("Time: %s Addr: %s\n", entity.getDateTime("timestamp"),
-              entity.getString("user_ip"));
-        }
-    }
+		GCloudDataStoreWriter gw = new GCloudDataStoreWriter();
+		
+		String swid = "{0078AE36-582E-4179-B8AE-36582ED17938}";
+		FunProfile funProfile = gw.getFunProfileBySwid(swid);
+		if (funProfile == null) {
+			System.out.println("profile not found for swid:" + swid);
+		} else {
+			funProfile.print();
+		}
+		
+		List<String> swids = gw.getSomeSwids();
+		for (String s : swids) {
+			System.out.println(s);
+		}
+		
+		
+	}
 }
