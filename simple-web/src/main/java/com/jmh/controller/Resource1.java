@@ -1,4 +1,4 @@
-package com.jmh;
+package com.jmh.controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -8,8 +8,8 @@ import javax.ws.rs.core.MediaType;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("myresource")
-public class MyResource {
+@Path("resource1")
+public class Resource1 {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
